@@ -181,6 +181,7 @@ ss -ltnp | grep 8000
 
 uvicorn と Web サーバの違い（整理）
 |項目|	uvicorn|nginx / Apache|
+|---|---|---|
 |HTTP受信|○|○|
 |Python実行|○|✕|
 |ASGI対応|○|✕|
