@@ -1,0 +1,4 @@
+
+仮想環境を作成。ここからFastAPIの世界が広がっていく
+$ which python
+/home/siwuser/work/fastapi-linux-learning/fastapi-env/bin/python
