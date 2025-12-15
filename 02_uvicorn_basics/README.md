@@ -8,7 +8,7 @@
 ASGI（Asynchronous Server Gateway Interface）は、  
 **Python アプリケーションと Web サーバをつなぐための仕様**です。
 
-従来の Python Web では、WSGI（Web Server Gateway Interface） という仕様が主に使われてきました。  
+従来の Python Web では、**WSGI（Web Server Gateway Interface）** という仕様が主に使われてきました。  
 ASGI はその **後継・拡張** にあたります。
 
 ---
@@ -118,6 +118,79 @@ which uvicorn
 - uvicorn はどこにインストールされたか
 - system Python ではなく、仮想環境配下になっているか
 
+## 最小の ASGI アプリを用意する
 
-system Python ではなく、仮想環境配下になっているか
+FastAPI は まだ使いません。
+ASGI アプリとして最小のものを用意します。
+```
+# app.py
+async def app(scope, receive, send):
+    assert scope["type"] == "http"
 
+    await send({
+        "type": "http.response.start",
+        "status": 200,
+        "headers": [(b"content-type", b"text/plain")],
+    })
+    await send({
+        "type": "http.response.body",
+        "body": b"Hello from ASGI",
+    })
+```
+
+uvicorn で起動する
+```
+uvicorn app:app
+```
+
+ブラウザで以下にアクセスします。
+
+http://127.0.0.1:8000
+
+## ここで起きていること
+
+この時点で起きているのは：
+- uvicorn プロセスが起動している
+- ポート 8000 を LISTEN している
+- HTTP リクエストを受け取っている
+- ASGI アプリ（app）を呼び出している
+
+## プロセスの確認
+
+```
+ps aux | grep uvicorn
+```
+
+または：
+
+```
+pstree -p | grep uvicorn
+```
+
+観察ポイント
+- uvicorn が Linux プロセスとして存在している
+- FastAPI（まだ使っていない）はプロセスではない
+
+ポートの確認
+```
+ss -ltnp | grep 8000
+```
+観察ポイント
+- ポート 8000 を LISTEN しているのは誰か
+- uvicorn が Web サーバとして振る舞っていること
+
+uvicorn と Web サーバの違い（整理）
+|項目|	uvicorn|nginx / Apache|
+|HTTP受信|○|○|
+|Python実行|○|✕|
+|ASGI対応|○|✕|
+|FastAPI実行|○|✕|
+
+※ nginx / Apache は 別の役割
+（リバースプロキシ・静的配信など）
+
+## この章で理解しておきたいこと
+- FastAPI は 単体では動かない
+- uvicorn が 実行主体
+- uvicorn は Python製 Web サーバ
+- Linux 的には「1つのプロセス」として扱える
