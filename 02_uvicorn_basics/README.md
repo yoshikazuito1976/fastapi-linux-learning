@@ -60,7 +60,7 @@ FastAPI は **ASGIアプリケーション**です。
 [uvicorn (ASGI server)]
    ↓
 [FastAPI (ASGI app)]
-
+```
 FastAPI は「アプリ」であり、  
 **実際にプロセスとして起動し、ポートを開いているのは uvicorn** です。
 
