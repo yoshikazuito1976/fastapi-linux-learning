@@ -59,7 +59,14 @@ uvicorn によって呼び出されているアプリケーションであるこ
 最小の FastAPI アプリを作成する
 まずは、最小構成の FastAPI アプリを作成します。
 
+この章では、FastAPI アプリケーションのエントリポイントとして
+`main.py` を作成します。
+
+`main.py` は、uvicorn から起動される
+アプリケーションの起点となるファイルです。
+
 ```python
+# main.py
 from fastapi import FastAPI
 
 app = FastAPI()
