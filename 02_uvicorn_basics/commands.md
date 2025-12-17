@@ -35,8 +35,6 @@ siwuser 2889 ... python3 ... uvicorn app:app
 uvicorn app:app --log-level info
 ```
 uvicorn の起動ログ（抜粋）
-text
-コードをコピーする
 ```
 INFO:     Started server process [3174]
 INFO:     Application startup complete.
@@ -58,5 +56,5 @@ INFO: 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 OK
 commands.md には概要のみを記載し、
 詳細なログは logs ディレクトリを参照します。
 
-commands.md には概要のみを記載し、
-詳細なログは logs ディレクトリを参照します。
+
+
