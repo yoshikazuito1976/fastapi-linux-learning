@@ -1,0 +1,8 @@
+$ which python
+/home/siwuser/work/fastapi-linux-learning/fastapi-env/bin/python
+$ which uvicorn
+/home/siwuser/work/fastapi-linux-learning/fastapi-env/bin/uvicorn
+$ ps aux | grep uvicorn
+siwuser     2889  0.6  0.3  35952 26724 pts/0    S+   05:43   0:00 /home/siwuser/work/fastapi-linux-learning/fastapi-env/bin/python3 /home/siwuser/work/fastapi-linux-learning/fastapi-env/bin/uvicorn app:app
+siwuser     3082  0.0  0.0   7820  4532 pts/1    S+   05:46   0:00 grep --color=auto --exclude-dir=.bzr --exclude-dir=CVS --exclude-dir=.git --exclude-dir=.hg --exclude-dir=.svn --exclude-dir=.idea --exclude-dir=.tox --exclude-dir=.venv --exclude-dir=venv uvicorn
+$ uvicorn app:app --log-level info
