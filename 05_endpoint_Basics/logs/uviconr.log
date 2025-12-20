@@ -1,0 +1,14 @@
+(fastapi-env) $ uvicorn main:app --reload
+INFO:     Will watch for changes in these directories: ['/home/aisyu1976/work/fastapi-linux-learning/05_endpoint_Basics/src']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [31209] using StatReload
+INFO:     Started server process [31222]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:42492 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42506 - "GET /items HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49308 - "GET /items/docs HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:45488 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49144 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42194 - "POST /items HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50440 - "POST /items HTTP/1.1" 200 OK
