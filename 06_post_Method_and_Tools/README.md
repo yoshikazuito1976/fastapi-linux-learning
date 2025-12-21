@@ -87,7 +87,7 @@ curl -X POST http://127.0.0.1:8000/items
 FastAPI 側のコードは、次のように JSON を受け取る形にします。
 
 ```
-#app2.py
+#app.py
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -100,6 +100,9 @@ class Item(BaseModel):
 @app.post("/items")
 def create_item(item: Item):
     return {"received": item}
+```
+```
+uvicorn app:app
 ```
 
 このとき、curl は次のようになります。
@@ -114,6 +117,19 @@ curl -X POST http://127.0.0.1:8000/items \
 - -H "Content-Type: application/json" は「これはJSONです」という宣言です
 - -d は送信データ（リクエストボディ）です
 - JSON の引用符（"）に注意します（最初はここで詰まりやすいです）
+
+### JSON が壊れている場合のエラー例
+
+POST リクエストで送信する JSON の形式が正しくない場合、
+FastAPI はエラーを返します。
+
+以下は、文字列のクォートが閉じられていない例です。
+
+```bash
+-d '{
+  "name": "apple
+}'
+```
 
 5. curl と wget の違い（API学習の観点）
 
