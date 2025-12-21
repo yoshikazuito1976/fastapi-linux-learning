@@ -87,7 +87,7 @@ curl -X POST http://127.0.0.1:8000/items
 FastAPI 側のコードは、次のように JSON を受け取る形にします。
 
 ```
-#app.py
+#main.py
 
 from fastapi import FastAPI
 from pydantic import BaseModel
