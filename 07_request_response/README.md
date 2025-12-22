@@ -63,6 +63,24 @@ def status_demo():
     )
 ```
 ---
+## uvicorn起動
+```
+uvicorn main:app --log-config logging.conf
+
+```
+ログが画面とファイルに同時に記録されます。
+logging.confにその設定が書いてあるので、興味がある人は中身を確認しましょう。
+
+---
+## ログの確認
+
+以下のコマンドで、アクセスログをリアルタイムに確認できます。
+
+```bash
+tail -f logs/access.log
+---
+
+
 ## 演習1：Request を観察する
 
 以下のコマンドを実行してください。
