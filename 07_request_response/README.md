@@ -55,10 +55,41 @@ async def inspect(request: Request):
         "client": request.client.host if request.client else None,
     }
 
-
 @app.get("/status")
 def status_demo():
     return JSONResponse(
         status_code=201,
         content={"message": "created"}
+    )
+```
+---
+## 演習1：Request を観察する
+
+以下のコマンドを実行してください。
+```
+curl -i http://localhost:8000/inspect
+```
+
+** 確認するポイント ** ：
+
+- HTTPメソッドは何か
+- headers には何が含まれているか
+- User-Agent はどこから来ているか
+
+## 演習2：Response の status code を確認する
+```
+curl -i http://localhost:8000/status
+```
+
+** 確認するポイント ** ：
+- status code はいくつか
+- なぜ 200 ではないのか
+
+## まとめ
+- FastAPI は HTTP の上で動いている
+- API は「叩ける」だけでなく「理解する」ことが重要
+
+Request / Response を観察できることは、実務で強い武器になる
+
+eated"}
     )
