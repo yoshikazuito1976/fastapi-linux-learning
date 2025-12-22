@@ -1,0 +1,25 @@
+2025-12-23 05:56:36,045 - uvicorn.error - INFO - Started server process [32176]
+2025-12-23 05:56:36,046 - uvicorn.error - INFO - Waiting for application startup.
+2025-12-23 05:56:36,046 - uvicorn.error - INFO - Application startup complete.
+2025-12-23 05:56:36,048 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-23 05:56:41,734 - uvicorn.access - INFO - 127.0.0.1:58330 - "GET / HTTP/1.1" 200
+2025-12-23 05:56:49,673 - uvicorn.access - INFO - 127.0.0.1:42454 - "GET /status HTTP/1.1" 201
+2025-12-23 05:56:57,952 - uvicorn.access - INFO - 127.0.0.1:36196 - "GET /status HTTP/1.1" 201
+2025-12-23 05:57:06,043 - uvicorn.access - INFO - 127.0.0.1:38618 - "GET /inspector HTTP/1.1" 404
+2025-12-23 05:57:11,612 - uvicorn.access - INFO - 127.0.0.1:38620 - "GET /inspect HTTP/1.1" 200
+2025-12-23 05:57:24,171 - uvicorn.access - INFO - 127.0.0.1:42082 - "GET /status HTTP/1.1" 201
+2025-12-23 05:57:51,547 - uvicorn.error - INFO - Shutting down
+2025-12-23 05:57:51,649 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-12-23 05:57:51,655 - uvicorn.error - INFO - Application shutdown complete.
+2025-12-23 05:57:51,660 - uvicorn.error - INFO - Finished server process [32176]
+2025-12-23 05:59:49,293 - uvicorn.error - INFO - Started server process [32222]
+2025-12-23 05:59:49,293 - uvicorn.error - INFO - Waiting for application startup.
+2025-12-23 05:59:49,293 - uvicorn.error - INFO - Application startup complete.
+2025-12-23 05:59:49,296 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-23 05:59:53,662 - uvicorn.access - INFO - 127.0.0.1:56706 - "GET /status HTTP/1.1" 201
+2025-12-23 06:00:20,341 - uvicorn.access - INFO - 127.0.0.1:53210 - "GET /inspet HTTP/1.1" 404
+2025-12-23 06:00:33,234 - uvicorn.access - INFO - 127.0.0.1:54292 - "GET /inspect HTTP/1.1" 200
+2025-12-23 06:00:45,707 - uvicorn.error - INFO - Shutting down
+2025-12-23 06:00:45,808 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-12-23 06:00:45,813 - uvicorn.error - INFO - Application shutdown complete.
+2025-12-23 06:00:45,813 - uvicorn.error - INFO - Finished server process [32222]
