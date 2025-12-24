@@ -54,7 +54,62 @@ APIの意味が決まります。
 ※ 用語（safe / 冪等）は深入りせず、挙動の理解を重視します
 
 ---
+---
 
+### サンプルアプリ（app.py）
+
+この章では、HTTPメソッドの違いを観察するために  
+**最小構成の FastAPI アプリ**を使用します。
+
+以下の `app.py` を作成してください。
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/items")
+def get_items():
+    return {"method": "GET", "message": "get items"}
+
+@app.post("/items")
+def post_items():
+    return {"method": "POST", "message": "create item"}
+
+@app.put("/items/{item_id}")
+def put_item(item_id: int):
+    return {
+        "method": "PUT",
+        "item_id": item_id,
+        "message": "update item"
+    }
+
+@app.delete("/items/{item_id}")
+def delete_item(item_id: int):
+    return {
+        "method": "DELETE",
+        "item_id": item_id,
+        "message": "delete item"
+    }
+```
+### アプリの起動
+
+以下のコマンドでアプリを起動します。
+```
+uvicorn app:app --reload
+```
+
+起動後、http://localhost:8000 でアクセスできます。
+
+### Swagger UI について
+
+FastAPI は、自動的に **Swagger UI** を提供します。
+
+アプリを起動した状態で、以下のURLにアクセスしてください。
+```
+http://localhost:8000/docs
+```
+---
 ### 同じURLでも意味は変わる
 
 例：`/items`
