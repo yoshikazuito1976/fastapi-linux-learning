@@ -1,0 +1,17 @@
+2025-12-26 05:52:43,488 - uvicorn.error - INFO - Will watch for changes in these directories: ['/home/aisyu1976/work/fastapi-linux-learning/09_path_query_and_body']
+2025-12-26 05:52:43,488 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-26 05:52:43,491 - uvicorn.error - INFO - Started reloader process [592] using StatReload
+2025-12-26 05:52:44,018 - uvicorn.error - INFO - Started server process [594]
+2025-12-26 05:52:44,018 - uvicorn.error - INFO - Waiting for application startup.
+2025-12-26 05:52:44,020 - uvicorn.error - INFO - Application startup complete.
+2025-12-26 05:53:26,490 - uvicorn.access - INFO - 127.0.0.1:46450 - "GET /items/10 HTTP/1.1" 200
+2025-12-26 05:54:30,275 - uvicorn.access - INFO - 127.0.0.1:47194 - "GET /search?q= HTTP/1.1" 200
+2025-12-26 05:54:34,512 - uvicorn.access - INFO - 127.0.0.1:47210 - "GET /search?q=fastapi HTTP/1.1" 200
+2025-12-26 05:55:27,700 - uvicorn.access - INFO - 127.0.0.1:55754 - "POST /items HTTP/1.1" 200
+2025-12-26 05:56:02,409 - uvicorn.access - INFO - 127.0.0.1:54622 - "GET /test/10?q=20 HTTP/1.1" 200
+2025-12-26 05:59:33,466 - uvicorn.access - INFO - 127.0.0.1:60306 - "GET /items/abc HTTP/1.1" 422
+2025-12-26 05:59:53,391 - uvicorn.access - INFO - 127.0.0.1:48480 - "GET /test/10?q=abc HTTP/1.1" 422
+2025-12-26 06:00:13,484 - uvicorn.access - INFO - 127.0.0.1:36118 - "GET /test/10 HTTP/1.1" 422
+2025-12-26 06:00:37,091 - uvicorn.access - INFO - 127.0.0.1:52090 - "POST /items HTTP/1.1" 422
+2025-12-26 06:00:58,798 - uvicorn.access - INFO - 127.0.0.1:51874 - "POST /items HTTP/1.1" 422
+2025-12-26 06:01:18,631 - uvicorn.access - INFO - 127.0.0.1:54242 - "POST /items HTTP/1.1" 422
