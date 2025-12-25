@@ -1,4 +1,4 @@
-# 08 Path / Query / Body を観察する
+# 09 Path / Query / Body を観察する
 
 この章では、FastAPI が **どこから値を受け取っているのか**を整理します。
 
