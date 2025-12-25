@@ -45,35 +45,45 @@
 
 ---
 
-## 構成（予定）
+## Chapter Structure
 
-```text
-## 章立て案（2025-12-26時点 / repo現状に合わせて更新）
+このリポジトリは、FastAPI を「書き方」ではなく  
+**HTTP と Web アプリケーションの振る舞いを観察する**ことを目的に、  
+段階的な章構成で整理しています。
 
-### 前提（すでにmainに存在）
-- 01_environment
-- 02_uvicorn_basics
-- 03_FastAPI_Basics
-- 04_endpoint_Concepts
-- 05_endpoint_Basics
-- 06_post_Method_and_Tools
-- 07_request_response
-- 08_http_methods_overview
-- 09_path_query_and_body
+### 基礎・準備
+- 01_environment  
+- 02_uvicorn_basics  
 
-### 10以降（予定）
-- 10_validation_and_error_handling
-- 11_status_code_and_response_control
-- 12_response_header_and_cookie
-- 13_logging_and_application_log
-- 14_exception_and_debugging
-- 15_application_structure
-- 16_dependency_injection_basics
-- 17_security_basics
-- 18_external_api_request
-- 19_runtime_and_process
-- 20_simple_deployment
-- 99_summary_and_next_steps
+### FastAPI の基本構造
+- 03_FastAPI_Basics  
+- 04_endpoint_Concepts  
+- 05_endpoint_Basics  
+- 06_post_Method_and_Tools  
 
-※ 旧案の「08_path_query_and_body」は現状「09_path_query_and_body」として運用する。
+### HTTP Request / Response の理解
+- 07_request_response  
+- 08_http_methods_overview  
+- 09_path_query_and_body  
 
+### 入力検証とレスポンス制御（予定）
+- 10_validation_and_error_handling  
+- 11_status_code_and_response_control  
+- 12_response_header_and_cookie  
+
+### ログ・例外・デバッグ（予定）
+- 13_logging_and_application_log  
+- 14_exception_and_debugging  
+
+### アプリケーション設計と運用（予定）
+- 15_application_structure  
+- 16_dependency_injection_basics  
+- 17_security_basics  
+- 18_external_api_request  
+- 19_runtime_and_process  
+- 20_simple_deployment  
+
+### まとめ
+- 99_summary_and_next_steps  
+
+※ 各章は README / main.py / requests.md などを組み合わせて構成されます。
