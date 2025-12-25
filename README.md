@@ -48,12 +48,32 @@
 ## 構成（予定）
 
 ```text
-.
-├── 00_overview/        # 本ページ（全体像・方針）
-├── 01_environment/     # Python / venv / Linux 環境確認
-├── 02_uvicorn_basics/  # uvicorn の正体と役割
-├── 03_fastapi_basics/  # 最小 FastAPI
-├── 04_jinja/           # HTML を返す
-├── 05_htmx/            # API と HTML の橋渡し
-└── notes/              # 思考メモ・雑記
+## 章立て案（2025-12-26時点 / repo現状に合わせて更新）
+
+### 前提（すでにmainに存在）
+- 01_environment
+- 02_uvicorn_basics
+- 03_FastAPI_Basics
+- 04_endpoint_Concepts
+- 05_endpoint_Basics
+- 06_post_Method_and_Tools
+- 07_request_response
+- 08_http_methods_overview
+- 09_path_query_and_body
+
+### 10以降（予定）
+- 10_validation_and_error_handling
+- 11_status_code_and_response_control
+- 12_response_header_and_cookie
+- 13_logging_and_application_log
+- 14_exception_and_debugging
+- 15_application_structure
+- 16_dependency_injection_basics
+- 17_security_basics
+- 18_external_api_request
+- 19_runtime_and_process
+- 20_simple_deployment
+- 99_summary_and_next_steps
+
+※ 旧案の「08_path_query_and_body」は現状「09_path_query_and_body」として運用する。
 
