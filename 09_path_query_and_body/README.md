@@ -97,6 +97,13 @@ def test(value: int, q: int):
 - → **必須**
 - → 省略するとエラーになる
 
+※ `value` は Path Parameter であり、  
+URL の一部として指定されるため、省略という概念はありません。
+
+この例では、  
+**Query Parameter である `q` が必須かどうか**に注目しています。
+
+
 ---
 
 #### 例：省略可能な Query Parameter
