@@ -1,0 +1,21 @@
+2025-12-30 11:55:20,475 - uvicorn.error - INFO - Will watch for changes in these directories: ['/home/aisyu/work/fastapi-linux-learning/10_validation_and_error_handling']
+2025-12-30 11:55:20,475 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+2025-12-30 11:55:20,475 - uvicorn.error - INFO - Started reloader process [3397] using StatReload
+2025-12-30 11:55:25,552 - uvicorn.error - INFO - Started server process [3399]
+2025-12-30 11:55:25,552 - uvicorn.error - INFO - Waiting for application startup.
+2025-12-30 11:55:25,552 - uvicorn.error - INFO - Application startup complete.
+2025-12-30 11:57:30,043 - uvicorn.error - INFO - Shutting down
+2025-12-30 11:57:30,144 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-12-30 11:57:30,144 - uvicorn.error - INFO - Application shutdown complete.
+2025-12-30 11:57:30,144 - uvicorn.error - INFO - Finished server process [3399]
+2025-12-30 11:57:30,151 - uvicorn.error - INFO - Stopping reloader process [3397]
+2025-12-30 12:03:03,055 - uvicorn.error - INFO - Will watch for changes in these directories: ['/home/aisyu/work/fastapi-linux-learning/10_validation_and_error_handling']
+2025-12-30 12:03:03,056 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+2025-12-30 12:03:03,056 - uvicorn.error - INFO - Started reloader process [3654] using StatReload
+2025-12-30 12:03:03,367 - uvicorn.error - INFO - Started server process [3656]
+2025-12-30 12:03:03,367 - uvicorn.error - INFO - Waiting for application startup.
+2025-12-30 12:03:03,368 - uvicorn.error - INFO - Application startup complete.
+2025-12-30 12:04:34,315 - uvicorn.access - INFO - 127.0.0.1:46798 - "GET /items/10?q=hello&limit=5 HTTP/1.1" 200
+2025-12-30 12:05:07,751 - uvicorn.access - INFO - 127.0.0.1:54498 - "GET /items/10?q=hello&limit=5 HTTP/1.1" 200
+2025-12-30 12:05:34,597 - uvicorn.access - INFO - 127.0.0.1:33800 - "GET /items/10?q=hello&limit=5 HTTP/1.1" 200
+2025-12-30 12:07:29,841 - uvicorn.access - INFO - 127.0.0.1:60516 - "POST /orders HTTP/1.1" 422
