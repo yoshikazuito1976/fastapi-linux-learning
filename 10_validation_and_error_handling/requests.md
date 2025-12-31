@@ -6,6 +6,18 @@
 ```bash
 uvicorn main:app --reload --port 8010
 ```
+## logging.conf を使ってログを制御する場合
+
+本リポジトリでは、../util/logging.conf にPython logging の設定を定義しています。
+```bash
+uvicorn main:app \
+  --reload \
+  --port 8010 \
+  --log-config ../util/logging.conf
+```
+- ログの出力先・フォーマット・レベルは logging.conf に従う
+- validation エラーや例外のログを ファイルに保存可能
+- FastAPI / uvicorn のログ設定をコードから分離できる
 ---
 ## 1) Path / Query の validation を観察する
 ### OK
