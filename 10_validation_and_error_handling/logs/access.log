@@ -19,3 +19,8 @@
 2025-12-30 12:05:07,751 - uvicorn.access - INFO - 127.0.0.1:54498 - "GET /items/10?q=hello&limit=5 HTTP/1.1" 200
 2025-12-30 12:05:34,597 - uvicorn.access - INFO - 127.0.0.1:33800 - "GET /items/10?q=hello&limit=5 HTTP/1.1" 200
 2025-12-30 12:07:29,841 - uvicorn.access - INFO - 127.0.0.1:60516 - "POST /orders HTTP/1.1" 422
+2026-01-01 08:09:52,706 - uvicorn.error - INFO - Shutting down
+2026-01-01 08:09:52,820 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-01-01 08:09:52,824 - uvicorn.error - INFO - Application shutdown complete.
+2026-01-01 08:09:52,825 - uvicorn.error - INFO - Finished server process [3656]
+2026-01-01 08:09:52,838 - uvicorn.error - INFO - Stopping reloader process [3654]
