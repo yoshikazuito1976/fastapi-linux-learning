@@ -109,16 +109,10 @@ FastAPI は、次のような処理を 自動で行っています。
 
 - dict を返す → JSON Response を作成
 - バリデーションエラー → 422 を返す
-- 型に合わない入力 → エラー Response を返す
+- 型に合わない入力 → エラー Response を返す  
 
-つまり、
-
-ユーザーが「Response を書いていない」
-
-のではなく、
-
-「FastAPI に任せている」
-状態です。
+つまり、**「（ユーザーが）Response を明示的に書いていない」** のではなく  
+**b「Response の生成を FastAPI に任せている」**  状態です。
 
 ---
 ## 6. Response を自分で返すということ
@@ -142,44 +136,40 @@ return JSONResponse(
 
 - Status Code を自分で指定できる
 - Header なども制御できる
-
-7. 「返り値」と「Response」は別物
+---
+## 7. 「返り値」と「Response」は別物
 
 ここが重要なポイントです。
 
-書き方	意味
-dict を返す	FastAPI に Response を作らせる
-Response を返す	開発者が Response を制御する
+|書き方|意味|
+|-----|----|
+|dict を返す|	FastAPI に Response を作らせる|
+|Response を返す|	開発者が Response を制御する|
 
 この違いを理解しておくと、
 次の章（Header / Cookie / Logging）が一気につながります。
-
-8. エラーは「例外」で表現する
+---
+## 8. エラーは「例外」で表現する
 
 FastAPI では、エラーを 例外（Exception） として表現します。
-
+```python
 raise HTTPException(
     status_code=404,
     detail="item not found"
 )
-
-
-処理を途中で止める
-
-明確な Status Code を返す
-
-エラーの意味をはっきりさせる
-
-9. なぜこの章が重要なのか
+```
+- 処理を途中で止める
+- 明確な Status Code を返す
+- エラーの意味をはっきりさせる
+---
+## 9. なぜこの章が重要なのか
 
 Status Code を意識できるようになると、
 
-API の設計が変わる
+- API の設計が変わる
+- エラーの扱いが整理される
+- ログやデバッグがしやすくなる
 
-エラーの扱いが整理される
-
-ログやデバッグがしやすくなる
-
-FastAPI を
-「便利な道具」から「制御できるフレームワーク」
+FastAPI を  
+**「便利な道具」から「制御できるフレームワーク」**  
 として使えるようになります。
