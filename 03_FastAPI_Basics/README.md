@@ -80,7 +80,7 @@ def read_root():
 
 - FastAPI アプリケーションを作成する
 - ルート (/) に対する GET リクエストを定義する
-- JSON を返す（python的にはdictだが、FASTAPIがJSONに変換している）
+- JSON を返す（python的にはdictだが、FastAPIがJSONに変換している）
 
 ## このコードで混乱しやすいポイント
 
@@ -92,6 +92,11 @@ HTTPでアクセスされたときに、FastAPIが自動で呼び出します。
 
 - どのURL（ここでは"/"）に対応しているか
 - 何を返しているか（returnの値がHTTPレスポンスになる）
+
+※ この時点では、関数を自分で書ける必要はありません。
+「HTTP で呼ばれると、FastAPI が関数を実行する」
+という流れが分かれば十分です。
+
 
 
 ## uvicorn で FastAPI を起動する
