@@ -5,6 +5,16 @@
 これまでの章では、主に「リクエストを受け取り、レスポンスボディを返す」ことに注目してきました。  
 しかし、Web におけるレスポンスは **ボディだけで構成されているわけではありません**。
 
+```mermaid
+sequenceDiagram
+    participant Browser
+    participant FastAPI
+
+    Browser->>FastAPI: Request
+    FastAPI-->>Browser: Response Set-Cookie
+    Browser->>FastAPI: Request Cookie
+```
+
 ---
 
 ## レスポンスは何でできているか
