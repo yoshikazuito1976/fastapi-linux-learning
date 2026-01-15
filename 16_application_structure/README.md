@@ -16,6 +16,35 @@
 > **「どう書くか」ではなく「どう分けるか」**
 
 をテーマに、アプリケーションの構造を整理します。
+```mermaid
+mindmap
+  root((main.py))
+    app
+      FastAPIインスタンス
+    import
+      routers
+        items.py
+    import
+      schemas
+        item.py
+    import
+      services
+        item_service.py
+```
+
+
+
+```mermaid
+flowchart TB
+  A[app/] --> B[main.py<br/>起点: app生成 / router登録]
+  A --> R[routers/<br/>HTTPの境界]
+  A --> S[schemas/<br/>データの形]
+  A --> V[services/<br/>処理の中身]
+
+  R --> R1[items.py]
+  S --> S1[item.py]
+  V --> V1[item_service.py]
+```
 
 ## なぜアプリケーション構造が必要なのか
 
