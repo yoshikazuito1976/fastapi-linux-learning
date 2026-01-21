@@ -87,3 +87,26 @@
 - 99_summary_and_next_steps  
 
 ※ 各章は README / main.py / requests.md などを組み合わせて構成されます。
+
+---
+
+## License
+
+This repository is licensed under the MIT License.
+
+© 2026 Yoshikazu Ito
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+(The rest of the MIT License text)
+
+This repository is provided primarily for educational purposes.
+Students are encouraged to read, modify, and reuse the code as part of their learning.
+
+
+
